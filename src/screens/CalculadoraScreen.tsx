@@ -7,7 +7,7 @@ import { useCalculadora } from '../hooks/useCalculadora';
 
 
 export const CalculadoraScreen = () => {
-
+    //Llamando al 'useCalculadora' y desestructurando (es lo mismo que se expone lo q se devuelve en el return)
     const {
         numeroAnterior,
         numero,
@@ -72,9 +72,10 @@ export const CalculadoraScreen = () => {
                 <BotonCalc texto="+" color="#FF9427" accion={ btnSumar } />
             </View>
 
-            {/* Fila de botones */}
+            {/* En el primer boton envía la propiedad 'ancho' si bien es cierto que no esta ancho={true}
+            es lo mismo que coloques solamente la mandes 'ancho' react intuye q es true*/}
             <View style={ styles.fila }>
-                <BotonCalc texto="0" accion={ armarNumero } ancho />
+                <BotonCalc texto="0" accion={ armarNumero } ancho /> 
                 <BotonCalc texto="." accion={ armarNumero } />
                 <BotonCalc texto="=" color="#FF9427" accion={ calcular } />
             </View>

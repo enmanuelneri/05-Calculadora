@@ -11,12 +11,13 @@ interface Props {
 
 export const BotonCalc = ({ texto, color = '#2D2D2D', ancho = false, accion }: Props) => {
     return (
+        // 
         <TouchableOpacity
             onPress={ () => accion( texto ) }
         >
             <View style={{ 
-                ...styles.boton ,
-                backgroundColor: color,
+                ...styles.boton ,//Desestructurando para entrar a la opcion de 'backgroundColor'
+                backgroundColor: color,//Asignando el color q se envia 
                 width: ( ancho ) ? 180 : 80
             }}>
                 <Text style={{ 
